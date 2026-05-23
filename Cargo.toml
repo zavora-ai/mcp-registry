@@ -1,0 +1,22 @@
+[package]
+name = "mcp-registry"
+version = "1.0.0"
+edition = "2021"
+authors = ["James Karanja <james.karanja@zavora.ai>"]
+description = "MCP Registry — central control plane for MCP server registration, tool discovery, allow-lists, health, and audit"
+license = "Apache-2.0"
+repository = "https://github.com/zavora-ai/mcp-registry"
+homepage = "https://enterprise.adk-rust.com"
+keywords = ["mcp", "registry", "adk", "enterprise", "governance"]
+categories = ["development-tools", "web-programming"]
+readme = "README.md"
+
+[dependencies]
+adk-mcp-sdk = "0.1"
+rmcp = { version = "1.7", features = ["server", "transport-io", "macros"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["full"] }
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1", features = ["v4"] }
+anyhow = "1"
