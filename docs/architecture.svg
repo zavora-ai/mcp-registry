@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#4f46e5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="500" fill="#f8fafc" rx="12"/>
+
+  <!-- Title -->
+  <rect x="250" y="15" width="400" height="40" rx="8" fill="url(#headerGrad)"/>
+  <text x="450" y="41" text-anchor="middle" fill="white" font-size="16" font-weight="bold">MCP Registry — Control Plane</text>
+
+  <!-- MCP Servers (left) -->
+  <rect x="30" y="100" width="180" height="340" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="120" y="125" text-anchor="middle" font-size="12" font-weight="bold" fill="#5b21b6">MCP Servers</text>
+  <rect x="45" y="140" width="150" height="30" rx="4" fill="white" stroke="#c4b5fd"/>
+  <text x="120" y="160" text-anchor="middle" font-size="10" fill="#374151">GitHub MCP</text>
+  <rect x="45" y="180" width="150" height="30" rx="4" fill="white" stroke="#c4b5fd"/>
+  <text x="120" y="200" text-anchor="middle" font-size="10" fill="#374151">Slack MCP</text>
+  <rect x="45" y="220" width="150" height="30" rx="4" fill="white" stroke="#c4b5fd"/>
+  <text x="120" y="240" text-anchor="middle" font-size="10" fill="#374151">Database MCP</text>
+  <rect x="45" y="260" width="150" height="30" rx="4" fill="white" stroke="#c4b5fd"/>
+  <text x="120" y="280" text-anchor="middle" font-size="10" fill="#374151">CI/CD MCP</text>
+  <rect x="45" y="300" width="150" height="30" rx="4" fill="white" stroke="#c4b5fd"/>
+  <text x="120" y="320" text-anchor="middle" font-size="10" fill="#374151">A2A MCP</text>
+  <rect x="45" y="340" width="150" height="30" rx="4" fill="white" stroke="#c4b5fd"/>
+  <text x="120" y="360" text-anchor="middle" font-size="10" fill="#374151">Payments MCP</text>
+  <rect x="45" y="380" width="150" height="30" rx="4" fill="white" stroke="#c4b5fd"/>
+  <text x="120" y="400" text-anchor="middle" font-size="10" fill="#374151">+ 60 more...</text>
+
+  <!-- Registry Core (center) -->
+  <rect x="270" y="80" width="360" height="380" rx="10" fill="white" stroke="#4f46e5" stroke-width="2"/>
+  <text x="450" y="105" text-anchor="middle" font-size="13" font-weight="bold" fill="#4f46e5">mcp-registry</text>
+
+  <!-- Tools grid -->
+  <rect x="290" y="120" width="155" height="24" rx="4" fill="#eef2ff"/>
+  <text x="367" y="136" text-anchor="middle" font-size="9" fill="#3730a3">register_mcp_server</text>
+  <rect x="455" y="120" width="155" height="24" rx="4" fill="#eef2ff"/>
+  <text x="532" y="136" text-anchor="middle" font-size="9" fill="#3730a3">update_mcp_server</text>
+
+  <rect x="290" y="152" width="155" height="24" rx="4" fill="#eef2ff"/>
+  <text x="367" y="168" text-anchor="middle" font-size="9" fill="#3730a3">list_mcp_servers</text>
+  <rect x="455" y="152" width="155" height="24" rx="4" fill="#eef2ff"/>
+  <text x="532" y="168" text-anchor="middle" font-size="9" fill="#3730a3">get_mcp_server</text>
+
+  <rect x="290" y="184" width="155" height="24" rx="4" fill="#eef2ff"/>
+  <text x="367" y="200" text-anchor="middle" font-size="9" fill="#3730a3">discover_mcp_tools</text>
+  <rect x="455" y="184" width="155" height="24" rx="4" fill="#eef2ff"/>
+  <text x="532" y="200" text-anchor="middle" font-size="9" fill="#3730a3">set_tool_allowlist</text>
+
+  <rect x="290" y="216" width="155" height="24" rx="4" fill="#eef2ff"/>
+  <text x="367" y="232" text-anchor="middle" font-size="9" fill="#3730a3">test_mcp_server</text>
+  <rect x="455" y="216" width="155" height="24" rx="4" fill="#eef2ff"/>
+  <text x="532" y="232" text-anchor="middle" font-size="9" fill="#3730a3">restart_mcp_server</text>
+
+  <rect x="290" y="248" width="155" height="24" rx="4" fill="#eef2ff"/>
+  <text x="367" y="264" text-anchor="middle" font-size="9" fill="#3730a3">disable_mcp_server</text>
+  <rect x="455" y="248" width="155" height="24" rx="4" fill="#eef2ff"/>
+  <text x="532" y="264" text-anchor="middle" font-size="9" fill="#3730a3">export_mcp_inventory</text>
+
+  <!-- Store sections -->
+  <rect x="290" y="290" width="100" height="50" rx="6" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="340" y="310" text-anchor="middle" font-size="9" font-weight="bold" fill="#166534">Server</text>
+  <text x="340" y="325" text-anchor="middle" font-size="9" fill="#166534">Registry</text>
+
+  <rect x="400" y="290" width="100" height="50" rx="6" fill="#fef3c7" stroke="#d97706"/>
+  <text x="450" y="310" text-anchor="middle" font-size="9" font-weight="bold" fill="#92400e">Discovery</text>
+  <text x="450" y="325" text-anchor="middle" font-size="9" fill="#92400e">Snapshots</text>
+
+  <rect x="510" y="290" width="100" height="50" rx="6" fill="#fce7f3" stroke="#db2777"/>
+  <text x="560" y="310" text-anchor="middle" font-size="9" font-weight="bold" fill="#9d174d">Allow-list</text>
+  <text x="560" y="325" text-anchor="middle" font-size="9" fill="#9d174d">Entries</text>
+
+  <rect x="290" y="355" width="155" height="50" rx="6" fill="#f1f5f9" stroke="#64748b"/>
+  <text x="367" y="375" text-anchor="middle" font-size="9" font-weight="bold" fill="#334155">Health Monitor</text>
+  <text x="367" y="390" text-anchor="middle" font-size="8" fill="#64748b">latency · errors · state</text>
+
+  <rect x="455" y="355" width="155" height="50" rx="6" fill="#fef2f2" stroke="#dc2626"/>
+  <text x="532" y="375" text-anchor="middle" font-size="9" font-weight="bold" fill="#991b1b">Audit Log</text>
+  <text x="532" y="390" text-anchor="middle" font-size="8" fill="#991b1b">actor · action · timestamp</text>
+
+  <!-- Agents (right) -->
+  <rect x="690" y="100" width="180" height="200" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="1.5"/>
+  <text x="780" y="125" text-anchor="middle" font-size="12" font-weight="bold" fill="#065f46">Agents</text>
+  <rect x="705" y="140" width="150" height="25" rx="4" fill="white" stroke="#6ee7b7"/>
+  <text x="780" y="157" text-anchor="middle" font-size="9" fill="#374151">Release Notes Agent</text>
+  <rect x="705" y="172" width="150" height="25" rx="4" fill="white" stroke="#6ee7b7"/>
+  <text x="780" y="189" text-anchor="middle" font-size="9" fill="#374151">Code Review Agent</text>
+  <rect x="705" y="204" width="150" height="25" rx="4" fill="white" stroke="#6ee7b7"/>
+  <text x="780" y="221" text-anchor="middle" font-size="9" fill="#374151">IT Support Agent</text>
+  <rect x="705" y="236" width="150" height="25" rx="4" fill="white" stroke="#6ee7b7"/>
+  <text x="780" y="253" text-anchor="middle" font-size="9" fill="#374151">Finance Agent</text>
+  <rect x="705" y="268" width="150" height="25" rx="4" fill="white" stroke="#6ee7b7"/>
+  <text x="780" y="285" text-anchor="middle" font-size="9" fill="#374151">Only allowed tools →</text>
+
+  <!-- Governance (right bottom) -->
+  <rect x="690" y="330" width="180" height="110" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+  <text x="780" y="355" text-anchor="middle" font-size="12" font-weight="bold" fill="#9a3412">Governance</text>
+  <text x="780" y="375" text-anchor="middle" font-size="9" fill="#374151">Policy simulation</text>
+  <text x="780" y="393" text-anchor="middle" font-size="9" fill="#374151">Approval workflow</text>
+  <text x="780" y="411" text-anchor="middle" font-size="9" fill="#374151">Credential vault</text>
+  <text x="780" y="429" text-anchor="middle" font-size="9" fill="#374151">Environment isolation</text>
+
+  <!-- Arrows -->
+  <path d="M210 270 L270 270" stroke="#7c3aed" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M630 200 L690 200" stroke="#059669" stroke-width="2" fill="none" marker-end="url(#arrow2)"/>
+  <path d="M630 380 L690 380" stroke="#ea580c" stroke-width="2" fill="none" marker-end="url(#arrow3)"/>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#7c3aed"/>
+    </marker>
+    <marker id="arrow2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#059669"/>
+    </marker>
+    <marker id="arrow3" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ea580c"/>
+    </marker>
+  </defs>
+
+  <!-- Badge -->
+  <rect x="320" y="460" width="260" height="25" rx="12" fill="#4f46e5"/>
+  <text x="450" y="477" text-anchor="middle" fill="white" font-size="11" font-weight="bold">10 Tools · Phase 1 · ADK-Rust Enterprise</text>
+</svg>
