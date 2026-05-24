@@ -1,7 +1,7 @@
 [package]
 name = "mcp-registry"
-version = "1.0.0"
-edition = "2021"
+version = "1.1.0"
+edition = "2024"
 authors = ["James Karanja <james.karanja@zavora.ai>"]
 description = "MCP Registry — central control plane for MCP server registration, tool discovery, allow-lists, health, and audit"
 license = "Apache-2.0"
@@ -20,3 +20,6 @@ tokio = { version = "1", features = ["full"] }
 chrono = { version = "0.4", features = ["serde"] }
 uuid = { version = "1", features = ["v4"] }
 anyhow = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+async-trait = "0.1"

@@ -1,3 +1,4 @@
+use adk_mcp_sdk::{HealthCheck, HealthStatus};
 use crate::store::RegistryStore;
 use crate::types::*;
 use chrono::Utc;
@@ -249,5 +250,16 @@ impl RegistryServer {
     #[tool(description = "Export server, tool, credential, and policy inventory")]
     fn export_mcp_inventory(&self) -> String {
         serde_json::to_string_pretty(&self.store.export_inventory()).unwrap()
+    }
+}
+
+#[async_trait::async_trait]
+impl HealthCheck for RegistryServer {
+    async fn check_health(&self) -> HealthStatus {
+        HealthStatus {
+            healthy: true,
+            message: Some("operational".into()),
+            latency_ms: Some(1),
+        }
     }
 }

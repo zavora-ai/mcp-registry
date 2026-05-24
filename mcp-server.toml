@@ -1,0 +1,81 @@
+server_id = "mcp_registry"
+display_name = "MCP Registry"
+version = "1.1.0"
+domain = "platform"
+sdk_version = "0.1.0"
+risk_level = "high"
+writes_allowed = "gated"
+transports = ["stdio"]
+credentials = []
+governance_gates = ["admin_approval"]
+environments = ["development", "staging", "production"]
+
+[[tools]]
+name = "register_server"
+description = "Add a new MCP server definition"
+risk_class = "internal_write"
+requires_approval = true
+credential_bindings = []
+
+[[tools]]
+name = "update_server"
+description = "Edit command, URL, transport, credentials, or policy labels"
+risk_class = "internal_write"
+requires_approval = true
+credential_bindings = []
+
+[[tools]]
+name = "list_servers"
+description = "Return registered servers by environment, status, owner, or domain"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []
+
+[[tools]]
+name = "inspect_server"
+description = "Inspect one server, including exposed tools and health"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []
+
+[[tools]]
+name = "discover_tools"
+description = "Pull tool definitions from a server"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []
+
+[[tools]]
+name = "allow_list_tools"
+description = "Approve which discovered tools agents can use"
+risk_class = "internal_write"
+requires_approval = true
+credential_bindings = []
+
+[[tools]]
+name = "health_check"
+description = "Run connectivity and schema checks"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []
+
+[[tools]]
+name = "restart_server"
+description = "Restart local or managed server runtime"
+risk_class = "internal_write"
+requires_approval = true
+credential_bindings = []
+
+[[tools]]
+name = "disable_server"
+description = "Remove server from active agent routing"
+risk_class = "internal_write"
+requires_approval = true
+credential_bindings = []
+
+[[tools]]
+name = "export_inventory"
+description = "Export server, tool, credential, and policy inventory"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []
