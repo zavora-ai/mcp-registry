@@ -1,9 +1,9 @@
 server_id = "mcp_registry"
-display_name = "MCP Registry"
+display_name = "Registry"
 version = "1.1.0"
 domain = "platform"
-sdk_version = "0.1.0"
-risk_level = "high"
+sdk_version = "0.2.0"
+risk_level = "critical"
 writes_allowed = "gated"
 transports = ["stdio"]
 credentials = []
@@ -11,70 +11,70 @@ governance_gates = ["admin_approval"]
 environments = ["development", "staging", "production"]
 
 [[tools]]
-name = "register_server"
+name = "register_mcp_server"
 description = "Add a new MCP server definition"
 risk_class = "internal_write"
-requires_approval = true
+requires_approval = false
 credential_bindings = []
 
 [[tools]]
-name = "update_server"
+name = "update_mcp_server"
 description = "Edit command, URL, transport, credentials, or policy labels"
-risk_class = "internal_write"
-requires_approval = true
+risk_class = "identity_security_action"
+requires_approval = false
 credential_bindings = []
 
 [[tools]]
-name = "list_servers"
+name = "list_mcp_servers"
 description = "Return registered servers by environment, status, owner, or domain"
 risk_class = "read_only"
 requires_approval = false
 credential_bindings = []
 
 [[tools]]
-name = "inspect_server"
+name = "get_mcp_server"
 description = "Inspect one server, including exposed tools and health"
 risk_class = "read_only"
 requires_approval = false
 credential_bindings = []
 
 [[tools]]
-name = "discover_tools"
+name = "discover_mcp_tools"
 description = "Pull tool definitions from a server"
 risk_class = "read_only"
 requires_approval = false
 credential_bindings = []
 
 [[tools]]
-name = "allow_list_tools"
+name = "set_tool_allowlist"
 description = "Approve which discovered tools agents can use"
 risk_class = "internal_write"
-requires_approval = true
+requires_approval = false
 credential_bindings = []
 
 [[tools]]
-name = "health_check"
+name = "test_mcp_server"
 description = "Run connectivity and schema checks"
 risk_class = "read_only"
 requires_approval = false
 credential_bindings = []
 
 [[tools]]
-name = "restart_server"
+name = "restart_mcp_server"
 description = "Restart local or managed server runtime"
 risk_class = "internal_write"
-requires_approval = true
+requires_approval = false
 credential_bindings = []
 
 [[tools]]
-name = "disable_server"
+name = "disable_mcp_server"
 description = "Remove server from active agent routing"
 risk_class = "internal_write"
-requires_approval = true
+requires_approval = false
 credential_bindings = []
 
 [[tools]]
-name = "export_inventory"
+name = "export_mcp_inventory"
 description = "Export server, tool, credential, and policy inventory"
 risk_class = "read_only"
 requires_approval = false

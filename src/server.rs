@@ -102,7 +102,7 @@ pub struct RegistryServer {
     pub store: std::sync::Arc<RegistryStore>,
 }
 
-#[tool_router(server_handler)]
+#[tool_router]
 impl RegistryServer {
     #[tool(description = "Add a new MCP server definition")]
     fn register_mcp_server(&self, Parameters(i): Parameters<RegisterMcpServerInput>) -> String {
@@ -262,4 +262,11 @@ impl HealthCheck for RegistryServer {
             latency_ms: Some(1),
         }
     }
+}
+
+adk_mcp_sdk::mcp_2026_server! {
+    server: RegistryServer,
+    task_tools: ["discover_mcp_tools", "export_mcp_inventory"],
+    approval_tools: [],
+    cache_ttl_ms: 60_000,
 }
